@@ -1,6 +1,6 @@
 import math
-import sequtils
 import times
+import sugar
 
 type
     Point* = object
@@ -99,7 +99,10 @@ proc make_rect(x: int): Poly =
     new_rect(f, f, 100, 100)
 
 proc main*(): void =
-    let polys = toSeq(0..999).map(make_rect)
+    let polys = collect(newSeq):
+        for i in 0..999:
+            make_rect(i)
+
     let start = cpuTime()
     var n = 0
     for i in 0 .. polys.len() - 1:
