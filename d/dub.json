@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"Alexander Pardes"
+	],
+	"copyright": "Copyright © 2020, Alexander Pardes",
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "benchmarks"
+}
